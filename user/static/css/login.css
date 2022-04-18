@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.cover{
+    height: 100vh;
+    background:linear-gradient(rgb(255, 217, 0),rgb(245, 221, 88));                       /* rgb(255, 217, 0)*/
+    display: flex;
+}
+
+.login{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.logo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h2{
+    color:rgb(5, 100, 145) ;
+    font-size: 120px;
+    line-height: 110px;
+    font-weight: 100;
+}
+.logo h2 span{
+    color: white;
+}
+
+.box{
+    background-color: white;
+    width: fit-content;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0.7px .2px 5px rgb(241, 102, 130);
+
+}
+
+.inp{
+    margin: 20px;
+}
+
+.box input{
+    padding: 10px 45px 10px 10px;
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid rgb(170, 10, 42);
+
+
+}
+
+
+.box input:focus{
+
+    background-color: rgb(255, 248, 249);
+
+}
+.box button{
+    padding: 8px 20px 8px 20px;
+    background-color:crimson ;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 15px;
+    border: none;
+    margin: 20px 0 30px 30px;
+}
+
+.box button:hover{
+    background-color:rgb(182, 40, 68) ;
+}
+
+.box h4{
+    padding: 5px 40px 5px 40px;
+}
+
+h1{
+    margin: 5px 0 40px;
+    /* font-weight: 150; */
+    font-family: 'Raleway', sans-serif;
+}
+
+h4{
+    font-size: 12px;
+    margin-bottom: 0;
+}
+h4 a{
+    text-decoration: none;
+    font-size: 13px;
+}
