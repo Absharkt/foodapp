@@ -18,3 +18,16 @@ def signup(request):
 
 def forgotpwd(request):
     return render(request,'forgotpwd.html')
+
+
+
+def profile(request):
+    return render(request,'profile.html')
+
+
+def orders(request):
+    return render(request,'orders.html')
+
+
+def items_list(request):
+    return render(request,'item-list.html')

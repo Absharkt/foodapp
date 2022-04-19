@@ -32,7 +32,7 @@
 
                    <div class="b">
                     <a href="{% url 'login' %}"><button class="login">Login</button></a>
-                    <a href="#"><i class="fa-solid fa-user fa-2x"></i></a>
+                    <a href="{% url 'profile' %}"><i class="fa-solid fa-user fa-2x"></i></a>
                   
 
                    </div>
@@ -49,9 +49,9 @@
          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
            <div class="navbar-nav ">
              <a class="nav-link active " href="#">Home <span class="sr-only">(current)</span></a>
-             <a class="nav-link" href="#">My Orders</a>
+             <a class="nav-link" href="{% url 'orders' %}">Orders</a>
              <a class="nav-link" href="#">Cart</a>
-             <a class="nav-link" href="#">Disabled</a>
+             <a class="nav-link" href="#"></a>
            </div>
          </div>
        </nav>
@@ -119,22 +119,22 @@
               <div class="row row_one p-5 justify-content-center">
 
 
-                <div class="card m-5 " style="width: 18rem;">
-                    <img src="{% static 'images/dessert.jpg' %}" class="card-img-top" alt="dsrt">
+                <div class="card m-5 hov" style="width: 18rem;">
+                    <a href="{% url 'items_list' %}"><img src="{% static 'images/dessert.jpg' %}" class="card-img-top" alt="dsrt"></a>
                     <div class="card-body bg">
                       <h5 class="card-title">Dessert</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <a href="#" class="btn btn-light">Add</a>
                     </div>
                   </div>
 
 
                   <div class="card m-5" style="width: 18rem;">
-                    <img src="{% static 'images/veg_salad card.jpg' %}" class="card-img-top" alt="...">
+                    <a href="#"><img src="{% static 'images/veg_salad card.jpg' %}" class="card-img-top" alt="..."> </a>
                     <div class="card-body bg">
                       <h5 class="card-title">Salad</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <a href="#" class="btn btn-light">Add</a>
                     </div>
                   </div>
 
@@ -143,7 +143,7 @@
                     <div class="card-body bg">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <a href="#" class="btn btn-light">Add</a>
                     </div>
                   </div>
 
@@ -153,7 +153,7 @@
                     <div class="card-body bg">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <a href="#" class="btn btn-light">Add</a>
                     </div>
                   </div>
 
@@ -163,7 +163,7 @@
                     <div class="card-body bg">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <a href="#" class="btn btn-light">Go somewhere</a>
                     </div>
                   </div>
 
@@ -173,7 +173,7 @@
                     <div class="card-body bg">
                       <h5 class="card-title">Card title</h5>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <a href="#" class="btn btn-light">Go somewhere</a>
                     </div>
                   </div>
 
@@ -195,27 +195,40 @@
       <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 col-md-5 col-lg-4 com container">
+              <center>
                 <h2>About Us</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel debitis magni nam reiciendis ratione est natus quam laborum omnis vitae?</p>
-            </div>
+              </center>
+              </div>
 
             <div class="col-sm-12 col-md-5 col-lg-4 com container">
+              <center>
               <h2>  Contact Us</h2>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque obcaecati non cum dolore ea incidunt, tempore fugiat aliquid expedita, explicabo quaerat perspiciatis dolorem nobis quo?</p>
+            </center>
             </div>
 
             <div class="col-sm-12 col-md-5 col-lg-4 com container">
-                <h2> Address</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati officia omnis neque eveniet nam error doloribus sapiente eligendi esse animi facilis, sequi temporibus? Sint nobis molestiae odio.</p>
+              <center>
+                <h2> Contact Us</h2>
+                <a href="#"><h6>Location</h6></a>
+                <h6>Call  : +91 874455785</h6>
+                <h6>deiverycube@gmail.com</h6>
+              </center>
               </div>
         </div>
 
         <div class="row ">
-            <h3>Follow us on</h3>
-            <div class="social">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-            </div>
+          
+         <center>
+           <div class="ftr">
+          <h3>Follow us on</h3>
+          <div class="social">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+          </div>
+        </div>
+      </center> 
         </div>
     </div>
 

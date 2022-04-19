@@ -1,0 +1,51 @@
+.container{
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Bangers&family=Poppins:wght@100&family=Quattrocento&family=Raleway:wght@200&display=swap');
+
+.cont{
+    padding: 35px;
+    display: flex;
+    
+}
+
+
+.pic{
+    width: 30%;
+
+}
+.pic img{
+    width: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.uinfo{
+    padding: 20px;
+    padding-left: 50px;
+}
+.uinfo h1{
+    font-family: 'Raleway', sans-serif;
+}
+
+.udetails{
+    padding-left: 90px;
+    padding-top: 50px;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+button{
+    padding: 5px;
+    border:none;
+    background-color: rgb(160, 160, 160);
+}
+.nav-item a{
+    color: white;
+}
+
+.nav-item{
+    background-color:lightsteelblue;
+    margin-right: 2px;
+}

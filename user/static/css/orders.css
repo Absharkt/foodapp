@@ -1,0 +1,32 @@
+
+
+.hed h1{
+    font-weight: lighter;
+    
+}
+
+body{
+    background-color: rgb(245, 245, 245);
+
+}
+
+.section2{
+    padding: 40px;
+}
+
+.order-item{
+    padding: 10px;
+    height: auto;
+    width: 90%;
+    border: 2px solid rgb(134, 134, 134);
+    display: flex;
+}
+
+.img img{
+    width: 150px;
+    border-radius:5px ;
+}
+
+.itm-det{
+    padding: 15px;
+}
