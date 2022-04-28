@@ -1,51 +1,62 @@
-.container{
-    
-}
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Bangers&family=Montserrat:wght@300&family=Poppins:wght@100&family=Quattrocento&family=Raleway:wght@200&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Bangers&family=Poppins:wght@100&family=Quattrocento&family=Raleway:wght@200&display=swap');
-
-.cont{
-    padding: 35px;
-    display: flex;
-    
-}
-
-
-.pic{
-    width: 30%;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Raleway', sans-serif; ;
 
 }
-.pic img{
-    width: 120px;
-    object-fit: cover;
+img{
     border-radius: 50%;
-    margin-top: 20px;
-}
-.uinfo{
-    padding: 20px;
-    padding-left: 50px;
-}
-.uinfo h1{
-    font-family: 'Raleway', sans-serif;
+    width: 200px;
+    margin-bottom: 30px;
 }
 
-.udetails{
-    padding-left: 90px;
+.mainn{
     padding-top: 50px;
-    font-family: 'Raleway', sans-serif;
-
+    padding-left: 80px;
 }
 
-button{
-    padding: 5px;
-    border:none;
-    background-color: rgb(160, 160, 160);
-}
-.nav-item a{
+/* .but{
+    margin-bottom: 15px;
+    width: 234px;
+    height: 38px;
+    border: none;
+    margin-right: 2px;
+    background-color: rgb(173, 173, 173);
     color: white;
 }
 
-.nav-item{
-    background-color:lightsteelblue;
-    margin-right: 2px;
+
+.but:hover{
+    background-color:rgb(187, 187, 187) ;
+} */
+.second{
+    margin-bottom: 40px;
+}
+
+.nav{
+    height: 38px;
+}
+
+.h{
+    margin-bottom: 40px;
+}
+
+.inpp{
+    width: 60%;
+    height: 35px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(56, 56, 56);
+    background-color: rgb(100, 100, 100);
+    color: white;
+    padding: 10px;
+}
+
+#txt{
+    border: none;
+    background-color: rgb(114, 114, 114);
+    color: white;
+    padding: 10px;
 }

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Bangers&family=Montserrat:wght@300&family=Poppins:wght@100&family=Quattrocento&family=Raleway:wght@200&display=swap');
+
+.box{
+    background-color: cyan;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: rgb(214, 214, 214);
+}
+
+.filt{
+    /* border: 1px solid grey; */
+    background-color: rgb(194, 194, 194);
+    height: fit-content;
+    
+}
+
+.content{
+    background-color: rgb(255, 255, 255);
+}
+
+h5{
+    font-family: 'Raleway', sans-serif;
+
+
+}
+p{
+    /* border: 1px solid grey; */
+    padding: 10px;
+}
+
+button{
+    padding: 3px;
+    border: none;
+    background-color: white;
+}
+
+button:hover{
+    background-color: rgb(184, 199, 211);
+    color: white;
+}
+
+.but{
+    background-color: rgb(3, 90, 3);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.but:hover{
+    background-color:  rgb(5, 139, 5);
+}

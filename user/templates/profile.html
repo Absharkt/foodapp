@@ -1,113 +1,89 @@
+{% extends "form.html" %}
 {% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/profile.css' %}">
-    <link rel="stylesheet" href="{% static 'css/home_menu.css' %}">
-    <link rel="stylesheet" href="{% static 'css/home_menu2.css' %}">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> -->
-    <script src="https://kit.fontawesome.com/d37084c1c8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
 
 </head>
-<body>
+<body class="bg-light">
+
     
-    <div class="main">
-        <div class="header">
-            <div class="logo">
-                <!-- <img src="/Amled.jpeg" alt="Delivery Cube"> -->
-                <h2>DELIVERY CUBE</h2>
+    <div class="container  mainn d-flex">
+        <div class="left col-lg-5 ">
+
+            <div>
+                <img src="{% static 'images/User-icon.jpg' %}" alt="" width="200px" style="border-radius: 50%;">
             </div>
-            <div class="det">
-                  <div class="a">
-                    <input type="search" class="inp">
-                    <button class="btnsr">search</button>
-                  </div>
 
-                   <div class="b">
-                    <a href="{% url 'login' %}"><button class="login">Login</button></a>
-                    <a href="{% url 'profile' %}"><i class="fa-solid fa-user fa-2x"></i></a>
-                  
+            <div class="second">
+                <h2>Name</h2>
+                <h5>Username</h5>
+                <p>Lorem ipsum dol sapientm explicabo aliquam, minima reprehenderit impedit dolores minus quam debitis voluptates nostrum officiis harum enim nam? Hic.</p>
+            </div>
 
-                   </div>
+            <div>
+                <!-- <button type="button" class="btn btn-dark but">Profile</button>
+                <br>
+                <button type="button" class="btn btn-dark but">History</button>
+                <br>
+                <button type="button" class="btn btn-dark but">Dark</button> -->
 
+                <button type="button" class="btn btn-dark but">edit</button>
+                
             </div>
         </div>
 
 
+        <div class=" right col-lg-7">
+            <!-- <div class="nav bg-info">
+                <button type="button" class=" but">Profile</button>
+                <button type="button" class=" but">Profile</button>
+                <button type="button" class=" but">Profile</button>
 
-        <nav class="navbar navbar-expand-md navbar-light nav2">
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-           <div class="navbar-nav ">
-             <a class="nav-link active " href="#">Home <span class="sr-only">(current)</span></a>
-             <a class="nav-link" href="#">My Orders</a>
-             <a class="nav-link" href="#">Cart</a>
-             <a class="nav-link" href="#">D</a>
-           </div>
-         </div>
-       </nav>
+            </div> -->
 
+            <h3 class="h Normal weight text">Basic Info</h3>
 
+            <form action="">
+                <label for="">Name</label>
+                <br>
+                <input class="inpp" type="text" value="Name">
+                <br>
 
+                <label for="">Username</label>
+                <br>
+                <input class="inpp" type="text" value="Name">
+                <br>
 
-       <div class="container bg-light">
-        <div class="out">
-           <div class="cont">
-               <div class="pic">
-                   <img src="{% static 'images/User-Icon.jpg' %}" alt="user">
-               </div>
-               <div class="udetails">
-                   <h2>samplename</h2>
-                   <h5>Username</h5>
-                   <h5>Useraa@gmail.com</h5>
+                <label for="">Mobile</label>
+                <br>
+                <input class="inpp" type="text" value="Name">
+                <br>
 
-               </div>
-           </div>
+                <label for="">E-mail</label>
+                <br>
+                <input class="inpp" type="text" value="Name">
+                <br>
 
-           <div>
-            <ul class="nav nav-pills bg-secondary">
-              <li class="nav-item ">
-                <a class="nav-link" href="#">Basic info</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Purchase history</a>
-              </li>
-           </div>
-
-           <div class="uinfo">
-                <h1>User Information</h1>
-
-                <div class="udetails">
-                  <h5>Abshar</h5>
-                  <h5>Abshar123</h5>
-                  <h5>Abshar1234@gmail.com</h5>
-                  <h5>78785858</h5>
-                  <h5>Address :</h5>
-
-
-                  <button>Edit details</button>
-                </div>
-           </div>
-
+                <label for="">Address</label>
+                <br>
+                <textarea  name="" id="txt" cols="40" rows="5"></textarea>
+            </form>
         </div>
-       </div>
-
-
-
-
-
-
-
-
+    </div>
 
 </body>
 </html>
+
+{% endblock %}

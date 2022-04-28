@@ -1,0 +1,94 @@
+{% extends "form.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+</head>
+<body>
+    
+    <div class="cover">
+        <h1>My Cart</h1>
+
+
+        <div class="tbl container">
+
+            <table class="table bg-light">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Products</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Total</th>
+
+                  </tr>
+                </thead>
+                <tbody >
+                  <tr>
+                    <th scope="row"><img src="{% static 'images/food icons.png' %}" alt=""></th>
+                    <td>Lorem ipsum dolor <br> voluptate officia <a href="#">see more</a></td>
+                    <td>
+                        <button class="but">+</button>
+                        <button class="but">1</button>
+                        <button class="but">-</button>
+
+                    </td>
+                    <td>Rs.1200</td>
+                    <td>Rs.1200</td>
+
+                  </tr>
+
+
+                  <tr>
+                    <th scope="row"><img src="Amoled.jpeg" alt=""></th>
+                    <td>Lorem ipsum dolor <br> voluptate officia <a href="#">see more</a></td>
+                    <td></td>
+                    <td>Rs.1200</td>
+                    <td>Rs.1200</td>
+
+                  </tr>
+
+
+                  <tr>
+                    <th scope="row"><img src="Amoled.jpeg" alt=""></th>
+                    <td>Lorem ipsum dolor <br> voluptate officia <a href="#">see more</a></td>
+                    <td></td>
+                    <td>Rs.1200</td>
+                    <td>Rs.1200</td>
+
+                  </tr>
+                 
+                </tbody>
+              </table>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="secton2">
+        <div class="container sec2">
+           <div class="d2">
+               <!-- <input type="text" placeholder="Enter promo code"> -->
+               <a href="{% url 'checkout' %}"><button class="but2">Checkout</button></a>
+               <!-- <button class="but3">Checkout</button> -->
+           </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+{% endblock %}

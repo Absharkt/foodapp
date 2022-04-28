@@ -4,7 +4,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def home(request):
-    return render(request,'home_menu.html')
+    return render(request,'home.html')
 
 
 
@@ -26,8 +26,17 @@ def profile(request):
 
 
 def orders(request):
-    return render(request,'orders.html')
+    return render(request,'orderss.html')
 
 
-def items_list(request):
-    return render(request,'item-list.html')
+def itemss(request):
+    return render(request,'itemss.html')
+
+
+
+def cart(request):
+    return render(request,'cart.html')
+
+
+def checkout(request):
+    return render(request,'checkout.html')

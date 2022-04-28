@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Bangers&family=Poppins:wght@100&family=Quattrocento&family=Raleway:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+}
+.heading{
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+
+
+.card{
+   box-shadow: .4px  .1px 8px rgb(219, 219, 219)
+
+}
+
+
+.bg{
+    background-color: rgb(240, 240, 240);
+}

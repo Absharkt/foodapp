@@ -1,0 +1,114 @@
+{% extends "form.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/orderss.css' %}">
+</head>
+<body>
+    
+    <div class="cover">
+        <h1>My Orders</h1>
+
+        <div class="out">
+            <div class="container">
+                <div class="row in">
+
+                    <div class="pic">
+                        <img src="{% static 'images/veg_salad card.jpg' %}" alt="no img">
+                    </div>
+
+                    <div class="two">
+                        <h5>item1</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p>
+
+                    </div>
+
+                    <div class="three">
+                        <h5>Lorem ipsum dolor sit.</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, doloremque. Obcaecati amet quidem similique!</p>
+                    </div>
+
+                    <div class="four">
+                        <h5>Others</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, doloremque. Obcaecati amet quidem similique!</p>
+
+                    </div>
+                
+                </div>
+
+
+                <div class="row in2">
+                    <button class="but4">Track Order</button>
+                    <button class="but4">Cancel Order</button>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="out">
+            <div class="container">
+                <div class="row in">
+
+                    <div class="pic">
+                        <img src="/Amoled.jpeg" alt="no img">
+                    </div>
+
+                    <div class="two">
+                        <h5>Flower </h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p>
+
+                    </div>
+
+                    <div class="three">
+                        <h5>Q details</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, doloremque. Obcaecati amet quidem similique!</p>
+                    </div>
+
+                    <div class="four">
+                        <h5>Others</h5>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, doloremque. Obcaecati amet quidem similique!</p>
+
+                    </div>
+                
+                </div>
+
+
+                <div class="row in2">
+                    <button class="but2">Track Order</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- <div class="secton2">
+        <div class="container sec2">
+           <div class="d2">
+               <input type="text" placeholder="Enter promo code">
+               <button class="but2">Apply</button>
+           </div>
+        </div>
+    </div> -->
+
+</body>
+</html>
+{% endblock %}

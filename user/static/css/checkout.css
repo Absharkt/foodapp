@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Bangers&family=Montserrat:wght@300&family=Poppins:wght@100&family=Quattrocento&family=Raleway:wght@200&display=swap');
 
 
-.sec{
-    padding-top: 80px;
-    padding-left: 50px;
-}
-.fil{
-    border: 2px solid grey;
-
-}
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:'Raleway', sans-serif; 
+
 }
+
+.inpckt{
+    width: 400px;
+    height: 35px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(204, 204, 204);
+    color: white;
+    padding: 10px;
+}
+

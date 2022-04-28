@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Bangers&family=Montserrat:wght@300&family=Poppins:wght@100&family=Quattrocento&family=Raleway:wght@600&display=swap');
+.cover{
+    padding-top: 50px;
+
+}
+
+.container{
+    box-shadow: 0.3px 3.2px 10px  rgb(179, 179, 179);
+}
+
+body{
+    background-color: rgb(228, 228, 228);
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 120px;
+    margin-bottom: 60px;
+}
+
+img{
+    height: 100px;
+    width: auto;
+}
+.but{
+    padding: 5px;
+    width: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+}
+
+.sec2{
+    margin-top: 80px;
+}
+
+.but2{
+    padding: 7px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+}
+
+.but4{
+    padding: 7px;
+    width: auto;
+    border: none;
+    background-color: gray;
+    color: white;
+    margin-right: 2px;
+}
+
+.but4:hover{
+    background-color:rgb(109, 109, 109) ;
+}
+
+.d2{
+    padding: 20px;
+    margin-bottom: 30px;
+}
+input{
+    width: 60%;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.but3{
+    padding: 5px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(98, 156, 86);
+    color: white;
+    float: right;
+    padding: 10px;
+}
+
+.but3:hover{
+    background-color:rgb(75, 133, 64) ;
+}
+
+.in{
+    /* border: 1px solid grey; */
+    background-color: white;
+    padding: 20px;
+}
+
+.in2{
+    /* border: 1px solid grey; */
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    margin-top: 3px;
+}
+
+.out {
+    margin-bottom: 80px;
+}
+
+h5{
+    font-family:'Raleway', sans-serif; ;
+}
+
+
+.pic{
+    margin-right: 20px;
+}
+.two{
+    margin-right: 100px;
+    width: 200px;
+
+}
+
+.three{
+    margin-right: 60px;
+    width: 160px;
+
+
+}
+
+.four{
+    width: 160px;
+
+}

@@ -8,7 +8,11 @@ urlpatterns = [
     path('forgot_password',views.forgotpwd,name="forgotpwd"),
     path('profile',views.profile,name="profile"),
     path('orders',views.orders,name="orders"),
-    path('items',views.items_list,name="items_list")
+    path('items',views.itemss,name="items_list"),
+    path('cart',views.cart,name="cart"),
+    path('checkout',views.checkout,name="checkout")
+
+
 
 
 
