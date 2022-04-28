@@ -40,3 +40,12 @@ def cart(request):
 
 def checkout(request):
     return render(request,'checkout.html')
+
+
+def restaurents(request):
+    return render(request,'restaurents.html')
+
+
+
+def payment(request):
+    return render(request,'payment.html')
