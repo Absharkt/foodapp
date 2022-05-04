@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Raleway:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.logo{
+    width: 40%;
+}
+
+.det{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header{
+    background-color:crimson;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+ 
+}
+
+
+.det button{
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+}
+
+/* .a{
+    width: 80%;
+} */
+.b{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.login{
+    margin-right: 20px;
+    width: 60px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.login:hover{
+    background-color:rgb(241, 241, 241) ;
+}
+
+
+.fa-user{
+    margin-top: 5px;
+}
+
+.b a{
+    color: rgb(255, 255, 255);
+}
+
+
+
+.new{
+    margin-right: 40px;
+    /* font-weight: bolder; */
+}
+
+.nav2{
+    background-color: rgb(214, 214, 214);
+}
+.appname{
+    font-family: 'Bangers', cursive;
+
+}
+
+
+
+
+.cf{
+}

@@ -1,0 +1,122 @@
+{% extends "seller_form.html" %}
+{% load static %}
+{% block content %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div>
+                <table class="table mr-5">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col" colspan="2">Categories</th>
+                        <th scope="col"><button type="button" class="btn btn-secondary">Add Category</button></th>
+                        <!-- <th scope="col">Last</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Hot items</td>
+                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Cool</td>
+                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Others</td>
+                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+            </div>
+
+        
+        </div>
+        <hr>
+        <div class="row">
+
+            <div>
+                <table class="table ">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col" colspan="2">Hot Items</th>
+                        <th scope="col" colspan="2">Price</th>
+                        <th scope="col"><button type="button" class="btn btn-secondary">Add item</button></th>
+                        <!-- <th scope="col">Last</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>product 1</td>
+                        <td>Rs.500</td>
+                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>pro2</td>
+                        <td>Rs.500</td>
+                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Others</td>
+                        <td>Rs.500</td>
+
+                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
+
+
+
+            <div>
+                <table class="table ml-5">
+                    <thead class="thead-light">
+                      <tr>
+                        <th scope="col" colspan="2"></th>
+                        <th scope="col"><button type="button" class="btn btn-secondary">Add Category</button></th>
+                        <!-- <th scope="col">Last</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Hot items</td>
+                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Cool</td>
+                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Others</td>
+                        <td><button type="button" class="btn btn-danger">Delete</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+{% endblock %}

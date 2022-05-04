@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
 
-    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <link rel="stylesheet" href="{% static 'seller_css/seller_form.css' %}">
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
@@ -40,25 +40,33 @@
             </div>
         </div>
 
+     <div class="row">
+        <div class="card col-lg-2" style="width: 12rem;">
+            <ul class="list-group list-group-flush">
+                <a href="{% url 's-dashboard' %}"><button type="button"class="btn btn-secondary mb-2 w-100" style="height: 50px;;">Dashboard</button></a>
+                <a href="{% url 's-menu' %}"><button type="button" class="btn btn-secondary mb-2 w-100" style="height: 50px;">Menu</button></a>
+                <a href="{% url 's-orders' %}"><button type="button" class="btn btn-secondary  mb-2 w-100" style="height: 50px;">Orders</button></a>
+                <a href=""><button type="button" class="btn btn-secondary  mb-2  w-100" style="height: 50px;">Orders</button></a>
+                <a href=""><button type="button" class="btn btn-secondary  mb-2  w-100" style="height: 50px;">Others</button></a>
+
+            </ul>
+          </div>
+          {% block content %} {% endblock %}
+    </div>
+          
 
 
-        <nav class="navbar navbar-expand-md navbar-light nav2">
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-           <div class="navbar-nav ">
-             <a class="nav-link active new" href="#">Home <span class="sr-only">(current)</span></a>
-             <a class="nav-link new" href="{% url 'orders' %}">Orders</a>
-             <a class="nav-link new" href="{% url 'cart' %}">Cart</a>
-             <a class="nav-link new" href="{% url 'restaurents' %}">Restaurents</a>
-           </div>
-         </div>
-       </nav>
+
+        <!-- <nav class="nav nav-pills flex-column flex-sm-row bg-light">
+            <a class="flex-sm-fill text-sm-center nav-link" href="{% url 'login' %}"><button type="button" class="btn btn-info w-100">Home</button></a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="{% url 'cart' %}"><button type="button" class="btn btn-info w-100">Add Restaurent</button></a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="#"><button type="button" class="btn btn-info w-100">Producs</button></a>
+            <a class="flex-sm-fill text-sm-center nav-link" href="#"><button type="button" class="btn btn-info w-100">Manage orders</button></a>
+
+          </nav> -->
   </div>
 
 
-  {% block content %} {% endblock %}
 
 
 

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Bangers&family=Montserrat:wght@300&family=Poppins:wght@100&family=Quattrocento&family=Raleway&display=swap');*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.logo{
+    width: 40%;
+}
+
+.det{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header{
+    background-color:crimson;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+ 
+}
+.inp{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    
+
+}
+
+.det button{
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.a{
+    width: 80%;
+}
+.b{
+    width: 20%;
+    display: flex;
+    justify-content: end;
+}
+.login{
+    margin-right: 20px;
+    width: 60px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.login:hover{
+    background-color:rgb(241, 241, 241) ;
+}
+
+.btnsr{
+    width: 60px;
+    background-color: rgb(255, 255, 255);
+}
+
+.btnsr:hover{
+    background-color:rgb(230, 230, 230) ;
+}
+
+.fa-user{
+    margin-top: 5px;
+}
+
+.b a{
+    color: rgb(255, 255, 255);
+}
+
+
+
+.new{
+    margin-right: 40px;
+    /* font-weight: bolder; */
+}
+
+.nav2{
+    background-color: rgb(214, 214, 214);
+}
+
+.logo h2{
+    font-family: 'Bangers', cursive;
+    font-weight: 200;
+}
+
+
+
+
+
