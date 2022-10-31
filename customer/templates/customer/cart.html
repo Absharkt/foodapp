@@ -1,0 +1,69 @@
+{% extends 'customer/base.html' %}
+{% load static %}
+
+{% block style %}<link rel="stylesheet" href="{% static 'style/cart.css' %}">{% endblock %}
+
+
+
+{% block content %}
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="m-4">
+                    <h1>Cart</h1>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                    <table class="table">
+                        <thead class="t-head">
+                          <tr>
+                            <th scope="col">Product</th>
+                            <th class="desc" scope="col">Description</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+        
+                          </tr>
+                        </thead>
+                        <tbody >
+        
+                          <tr>
+                            <td scope="row"><img src="" alt="" class="pic"></td>
+                            <td class="desc">Lorem ipsum dolor voluptat   <a href="#">see more</a></td>
+                            <td>Rs.1200</td>
+                            <td>
+                                <button class="btn btn-sm btn-primary">-</button>
+                                <b>2</b>
+                                <button class="btn btn-sm btn-primary">+</button>
+        
+                            </td>
+                            <td>Rs.1200</td>
+        
+                          </tr>
+        
+        
+                          <tr>
+                            <th scope="row"><img src="" alt=""></th>
+                            <td>Lorem ipsum dolor <br> voluptate officia <a href="#">see more</a></td>
+                            <td></td>
+                            <td>Rs.1200</td>
+                            <td>Rs.1200</td>
+        
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+
+                      <a href=""><button class="btn btn-success">Checkout</button></a>
+
+    
+            </div>
+
+        </div>
+    </section>
+
+{% endblock %}

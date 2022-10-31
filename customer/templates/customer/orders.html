@@ -1,0 +1,51 @@
+{% extends 'customer/base.html' %}
+{% load static %}
+
+{% block style %}<link rel="stylesheet" href="{% static 'style/orders.css' %}">{% endblock %}
+
+
+
+{% block content %}
+
+<div class="cover">
+    <h1>My Orders</h1>
+
+    <div class="out">
+        <div class="container">
+            <div class="row in">
+
+                <div class="pic">
+                    <img src="" alt="">
+                </div>
+
+                <div class="two">
+                    <h5>Name</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde.</p>
+
+                </div>
+
+                <div class="three">
+                    <h5>Status</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, doloremque. Obcaecati amet quidem similique!</p>
+                </div>
+
+                <div class="four">
+                    <h5>Others</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, doloremque. Obcaecati amet quidem similique!</p>
+
+                </div>
+            
+            </div>
+
+
+            <div class="row in2">
+                <button class="but4">Track Order</button>
+                <button class="but4">Cancel Order</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

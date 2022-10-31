@@ -1,0 +1,47 @@
+{% extends 'customer/base.html' %}
+{% load static %}
+
+{% block style %}<link rel="stylesheet" href="{% static 'style/profile.css' %}">{% endblock %}
+
+
+
+{% block content %}
+
+    <section class="m-4">
+        <div class="container">
+            <div class="row">
+
+                <div class="dp">
+                    <img src="../../static/images/sample_profile (2).jpg" alt="pic">
+                </div>
+
+                <div class="details">
+                    <span>John Doe</span>
+                    <p>johndoe@gmail.com</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="m-3">
+                    <form action="" method="post">
+                        {% csrf_token %}
+    
+                        <input type="text">
+
+                        <button class="btn btn-success" type="submit">Update</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}

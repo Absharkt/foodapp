@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Bangers&family=Cairo:wght@800&family=Montserrat:wght@300&family=Poppins:wght@100;200;300&family=Quattrocento&family=Raleway&display=swap');
+
+
+h1{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    background-color: rgb(234, 255, 234);
+
+}
+
+table{
+    background-color: rgb(249, 255, 248);
+    box-shadow: .1px .8px 7px .1px rgb(143, 192, 137);
+
+}
+.t-head{
+    background-color: rgb(195, 255, 180);
+
+}
+
+.pic{
+    width: 150px;
+    border-radius: 0;
+}
