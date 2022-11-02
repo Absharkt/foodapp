@@ -1,0 +1,106 @@
+{% extends 'customer/base.html' %}
+{% load static %}
+
+{% block style %}<link rel="stylesheet" href="{% static 'style/rest_home.css' %}">{% endblock %}
+
+
+
+{% block content %}
+
+    <section>
+        <div class="row">
+            <div class="container">
+                <div class=" rest-details mt-3">
+                    Restaurent Details
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="row">
+
+            <div class="w-100 text-center catg_titl">
+                <h1>Categories</h1>
+            </div>
+
+        </div>
+
+        <div>
+            <div class="m-5">
+                <input class="find" type="text" placeholder="Search">
+                <button type="submit" class="find_btn"><i class="fa-solid fa-magnifying-glass fa-fx-1"></i></button>
+              </div>
+        </div>
+
+        <div>
+
+            <div class="row">
+                <div class="item_name">
+                    <h2>Cereals and Breakfast Foods</h2>
+                </div>
+            </div>
+
+            <div class=" m-5">
+                <div class="row">
+
+                    <div class="card mr-3" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">An item</li>
+                          <li class="list-group-item">A second item</li>
+                        </ul>
+                        <div class="card-body">
+                          <a href="#" class="card-link">Card link</a>
+                          <a href="#" class="card-link">Another link</a>
+                        </div>
+                      </div>
+
+                      
+                    <div class="card mr-3" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">An item</li>
+                          <li class="list-group-item">A second item</li>
+                        </ul>
+                        <div class="card-body">
+                          <a href="#" class="card-link">Card link</a>
+                          <a href="#" class="card-link">Another link</a>
+                        </div>
+                      </div>
+
+                      
+                    <div class="card mr-3" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">An item</li>
+                          <li class="list-group-item">A second item</li>
+                        </ul>
+                        <div class="card-body">
+                          <a href="#" class="card-link">Card link</a>
+                          <a href="#" class="card-link">Another link</a>
+                        </div>
+                      </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock %}

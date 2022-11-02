@@ -1,0 +1,40 @@
+.find{
+    width: 75%;
+    padding: 15px;
+    border: none;
+    box-shadow: .11px 2px 4px .1px rgb(168, 212, 162);
+    border-radius: 25px;
+    font-size: large;
+}
+
+body{
+    background-color: rgb(234, 255, 234);
+
+}
+
+.find_btn{
+    border: none;
+    background-color: white;
+    box-shadow: .11px 2px 4px .1px rgb(168, 212, 162);
+    margin-left:15px ;
+    padding: 10px;
+    border-radius: 50%;
+
+}
+
+.fa-magnifying-glass{
+    color: rgb(26, 133, 22);
+}
+
+.fa-magnifying-glass:hover{
+    color: rgb(49, 179, 37);
+}
+
+.rest_card{
+    box-shadow: .1px .7px 5px .1px rgb(178, 199, 175);
+
+}
+
+.rest_name{
+    color: rgb(0, 0, 0);
+}

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Bangers&family=Cairo:wght@800&family=Montserrat:wght@300&family=Poppins:wght@100;200;300&family=Quattrocento&family=Raleway&display=swap');
+
+body{
+    background-color: rgb(234, 255, 234);
+}
+
+.rest-details{
+    background-color: rgb(202, 255, 202);
+    height: 400px;
+    border-radius: 15px;
+    padding: 25px;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+/* search */
+
+.find{
+    width: 350px;
+    padding: 10px;
+    border: none;
+    box-shadow: .11px 2px 4px .1px rgb(168, 212, 162);
+    border-radius: 40px;
+    font-size: large;
+}
+.find_btn{
+    border: none;
+    background-color: white;
+    box-shadow: .11px 2px 4px .1px rgb(168, 212, 162);
+    margin-left:10px ;
+    padding: 10px;
+    border-radius: 40%;
+
+}
+/* ======= */
+
+.catg_titl{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+}
+
+.search{
+    width: 80%;
+}
+
+.item_name{
+    margin-left: 20px;
+    font-weight: lighter;
+}

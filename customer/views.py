@@ -25,3 +25,15 @@ def customer_orders(request):
 
 def restaurents(request):
     return render(request,'customer/restaurents.html')
+
+
+def rest_home(request):
+    return render(request,'customer/rest_home.html')
+
+
+def cust_login(request):
+    return render(request,'customer/cust_login.html')
+
+
+def cust_register(request):
+    return render(request,'customer/cust_reg.html')

@@ -1,0 +1,36 @@
+{% extends 'customer/base.html' %}
+{% load static %}
+
+{% block style %}<link rel="stylesheet" href="{% static 'style/cust_login.css' %}">{% endblock %}
+
+
+
+{% block content %}
+
+<div class="container">
+    <div class="my-5 d-flex justify-content-center">
+        <div class="reg py-5">
+            <h2>Login</h2>
+
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Username</label>
+                  <input type="text" class="form-control" >
+                </div>
+                
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" >
+                </div>
+
+                <button type="submit" class="btn btn-primary my-2">Submit</button>
+
+              </form>
+
+              <a href="{% url 'cust_register'%}" class="text-primary">Don't have an account..?</a>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
