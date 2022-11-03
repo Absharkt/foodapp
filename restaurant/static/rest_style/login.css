@@ -1,0 +1,10 @@
+.reg{
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    width: 50%;
+    box-shadow: .11px 2px 4px .1px rgb(193, 224, 189);
+
+
+}

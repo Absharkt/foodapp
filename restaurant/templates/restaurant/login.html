@@ -1,7 +1,7 @@
-{% extends 'customer/base.html' %}
+{% extends 'restaurant/rest_base.html' %}
 {% load static %}
 
-{% block style %}<link rel="stylesheet" href="{% static 'style/cust_login.css' %}">{% endblock %}
+{% block style %}<link rel="stylesheet" href="{% static 'rest_style/login.css' %}">{% endblock %}
 
 
 
@@ -14,7 +14,7 @@
 
             <form>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Username</label>
+                  <label for="exampleInputEmail1">Email</label>
                   <input type="text" class="form-control" >
                 </div>
                 
@@ -23,13 +23,11 @@
                   <input type="password" class="form-control" >
                 </div>
 
-                <button type="submit" class="btn btn-primary my-2">Submit</button>
+                <button type="submit" class="btn btn-primary my-3">Submit</button>
 
               </form>
 
-              <a href="{% url 'cust_register'%}" class="text-primary">Don't have an account..?</a>
-              <br>
-              <a href="{% url 'login'%}" class="text-primary">Log in to Restaurant Account</a>
+              <a href="{% url 'register'%}" class="text-primary">Don't have an account..?</a>
 
         </div>
     </div>

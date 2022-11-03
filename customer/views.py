@@ -23,7 +23,7 @@ def customer_orders(request):
     return render(request,'customer/orders.html')
 
 
-def restaurents(request):
+def restaurants(request):
     return render(request,'customer/restaurents.html')
 
 

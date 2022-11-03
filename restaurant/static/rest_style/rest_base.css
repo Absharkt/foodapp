@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Bangers&family=Cairo:wght@800&family=Montserrat:wght@300&family=Poppins:wght@100;200;300&family=Quattrocento&family=Raleway&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(235, 235, 235);
+}
+
+#logo{
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: black;
+}
+
+.seller-nav{
+    background-color: rgb(116, 116, 116);
+}

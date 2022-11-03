@@ -1,0 +1,60 @@
+{% extends 'restaurant/rest_base.html' %}
+{% load static %}
+
+{% block style %}<link rel="stylesheet" href="{% static 'rest_style/order_details.css' %}">{% endblock %}
+
+
+
+{% block content %}
+
+<div class="row container-fluid">
+    <h2 class="m-4">Order Details</h2>
+</div>
+
+<div class="container">
+    <div class="row base">
+        <div class="user mb-2 bg-light">
+            <h3>Customer</h3>
+            <table class="m-4">
+                <tr>
+                    <td>Name :</td>
+                    <td>User23</td>
+                </tr>
+
+                <tr>
+                    <td>Phone :</td>
+                    <td>dfgdfh</td>
+                </tr>
+
+                <tr>
+                    <td>City :</td>
+                    <td>dfgdfh</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="prod bg-light">
+            <h3>Products</h3>
+            <table class="m-4">
+                <tr>
+                    <td>Name :</td>
+                    <td>User23</td>
+                </tr>
+
+                <tr>
+                    <td>Phone :</td>
+                    <td>dfgdfh</td>
+                </tr>
+
+                <tr>
+                    <td>City :</td>
+                    <td>dfgdfh</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+

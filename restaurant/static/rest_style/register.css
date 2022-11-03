@@ -1,0 +1,9 @@
+.cover{
+    border-radius: 15px;
+    box-shadow: .1px .8px 7px .1px rgb(209, 209, 209);
+
+}
+
+#forLogin{
+    color: rgb(0, 0, 255);
+}

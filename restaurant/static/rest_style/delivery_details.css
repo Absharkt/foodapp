@@ -1,0 +1,13 @@
+
+
+.user,.prod,.other{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: .1px .8px 7px .1px rgb(209, 209, 209);
+
+}
+
+.base{
+    display: flex;
+    flex-direction: column;
+}

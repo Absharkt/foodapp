@@ -1,0 +1,105 @@
+{% extends 'restaurant/rest_base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'rest_style/register.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    <section class="m-4">
+
+        <div class="container">
+            <div class="row">
+
+                <form action="" enctype="multipart/form-data">
+
+                    <form>
+
+                      <div class="bg-light p-4 cover">
+
+                        <h2 class="mb-5">Register Your Restaurant</h2>
+
+                        <div class="d-flex ">
+
+                          <div>
+
+                            <div class="form-group row">
+                              <label for="inputPassword" class="col-sm-2 col-form-label ml-4">Name</label>
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control ml-4" id="inputPassword" placeholder="Enter Restaurant Name">
+                              </div>
+                            </div>
+    
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label ml-4">Email</label>
+                                <div class="col-sm-10">
+                                  <input type="email" class="form-control ml-4" id="inputPassword" placeholder="Enter email">
+                                </div>
+                              </div>
+    
+
+                              <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label ml-4">Phone</label>
+                                <div class="col-sm-10">
+                                  <input type="password" class="form-control ml-4" id="inputPassword" placeholder="Phone Number">
+                                </div>
+                              </div>
+
+                              <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label ml-4">Location</label>
+                                <div class="col-sm-10">
+                                  <input type="text" class="form-control ml-4" id="inputPassword">
+                                </div>
+                              </div>
+
+                          </div>
+
+
+                          <div>
+    
+                              <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label ml-4">City</label>
+                                <div class="col-sm-10">
+                                  <input type="text" class="form-control ml-4" id="inputPassword">
+                                </div>
+                              </div>
+
+                                  
+                              <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label ml-4">Password</label>
+                                <div class="col-sm-10">
+                                  <input type="password" class="form-control ml-4" id="inputPassword">
+                                </div>
+                              </div>
+    
+                              <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label ml-4">Confirm</label>
+                                <div class="col-sm-10">
+                                  <input type="password" class="form-control ml-4" id="inputPassword">
+                                </div>
+                              </div>
+
+                          </div>
+
+                        </div>
+
+                        <div class="d-flex justify-content-between m-4">
+                          <a href="{% url 'login'%}" id="forLogin">Already registered..?</a>
+                        <button class="btn btn-sm btn-primary" type="submit">Submit</button>
+                        </div>
+
+                      </div>
+
+                    </form>
+
+                </form>
+
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}
+
