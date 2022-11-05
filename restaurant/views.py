@@ -33,3 +33,7 @@ def categories(request):
 
 def order_details(request):
     return render(request,'restaurant/order_details.html')
+
+
+def products(request):
+    return render(request,'restaurant/cat_prods.html')
