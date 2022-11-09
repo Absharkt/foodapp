@@ -1,0 +1,67 @@
+{% extends 'restaurant/rest_base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'rest_style/register.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<section class="m-4">
+
+  <div class="container">
+    <div class="row">
+
+
+        <div class="bg-light p-4 cover">
+          <h2 class="mb-5">Register Your Restaurant</h2>
+
+
+          <div class="d-flex justify-content-center form_container">
+
+            <form method="POST" action="">
+              {% csrf_token %}
+
+              <div class="input-group mb-3">
+                {{form.username.label}}
+                {{form.username}}
+              </div>
+  
+              <div class="input-group mb-2">
+                {{form.email.label}}
+                {{form.email}}
+              </div>
+  
+              <div class="input-group mb-2">
+                {{form.password1.label}}
+                {{form.password1}}
+              </div>
+  
+              <div class="input-group mb-2">
+                {{form.password2.label}}
+                {{form.password2}}
+  
+              </div>
+  
+              <div class="d-flex justify-content-center login_container">
+                <button type="submit" class="btn btn-info">Reg</button>
+              </div>
+            </form>
+          </div>
+  
+          {{form.errors}}
+
+
+          <div class="d-flex justify-content-between m-4">
+            <a href="{% url 'login'%}" id="forLogin">Already registered..?</a>
+          </div>
+
+        </div>
+
+    </div>
+  </div>
+
+</section>
+
+{% endblock %}

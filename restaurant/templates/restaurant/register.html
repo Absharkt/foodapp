@@ -16,10 +16,10 @@
                 <form action="" enctype="multipart/form-data">
 
                     <form>
-
+                        
                       <div class="bg-light p-4 cover">
 
-                        <h2 class="mb-5">Register Your Restaurant</h2>
+                        <h2 class="mb-5">Add More About Your Restaurant</h2>
 
                         <div class="d-flex ">
 
@@ -27,15 +27,19 @@
 
                             <div class="form-group row">
                               <label for="inputPassword" class="col-sm-2 col-form-label ml-4">Name</label>
-                              <div class="col-sm-10">
-                                <input type="text" class="form-control ml-4" id="inputPassword" placeholder="Enter Restaurant Name">
+                              <div class="ml-4">
+                                {{form.first_name}}
                               </div>
                             </div>
     
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-2 col-form-label ml-4">Email</label>
-                                <div class="col-sm-10">
+                                <!-- <div class="col-sm-10"> default style
                                   <input type="email" class="form-control ml-4" id="inputPassword" placeholder="Enter email">
+                                </div> -->
+
+                                <div>
+                                  {{form.first_name}}
                                 </div>
                               </div>
     

@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'foodshade.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'final_project',
+        'USER': 'postgres',
+        'PASSWORD': 'py123',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 
