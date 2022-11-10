@@ -6,6 +6,7 @@ from django.contrib.auth.models import Group
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from . decorators import allowed_users
 
 # Create your views here.
 
@@ -13,9 +14,12 @@ from django.contrib.auth.decorators import login_required
 def rest_base(request):
     return render(request,'restaurant/rest_base.html')
 
+
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['seller'])
 def home(request):
     return render(request,'restaurant/home.html')
+
 
 
 def first_register(request):
@@ -50,6 +54,7 @@ def first_register(request):
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['seller'])
 def add_reg_details(request):
     return render(request,'restaurant/register.html')
 
@@ -83,25 +88,30 @@ def rest_logout(request):
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['seller'])
 def orders(request):
     return render(request,'restaurant/rest_orders.html')
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['seller'])
 def delivery_details(request):
     return render(request,'restaurant/delivery_details.html')
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['seller'])
 def categories(request):
     return render(request,'restaurant/categories.html')
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['seller'])
 def order_details(request):
     return render(request,'restaurant/order_details.html')
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['seller'])
 def products(request):
     return render(request,'restaurant/cat_prods.html')

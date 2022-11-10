@@ -19,6 +19,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       
+
+        {% if request.user.is_authenticated %}
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
 
@@ -35,10 +38,14 @@
             <a href="{% url 'orders' %}"><i class="fa-sharp fa-solid fa-list-check mr-4 fa-1x"></i></a>
             <a href="{% url 'cart' %}"><i class="fa-sharp fa-solid fa-cart-shopping mr-4 fa-1x"></i></a>
             <a href="{% url 'profile' %}"> <i class="fa-regular fa-user mr-4 fa-1x"></i></a>
-            <button class="btn btn-light btn-sm " type="submit">Logout</button>
+
+            <a href="{% url 'cust_logout' %}"><button class="btn btn-light btn-sm " type="submit">Logout</button></a>
           </div>
 
         </div>
+
+        {% endif%}
+
       </nav>
 
 

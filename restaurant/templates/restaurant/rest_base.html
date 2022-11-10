@@ -19,6 +19,9 @@
           <span class="navbar-toggler-icon">|||</span>
         </button>
       
+
+        {% if request.user.is_authenticated %}
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
 
@@ -41,6 +44,9 @@
           </div>
 
         </div>
+
+        {% endif %}
+
       </nav>
 
 
