@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from . models import Restaurant
+from . models import Restaurant,Category
 from . forms import AddRestaurant
 
 from django.contrib.auth.models import Group
@@ -23,7 +23,7 @@ def home(request):
 
 
 def first_register(request):
-    #redirecting logged in users into the homepage without display login page
+    #redirecting logged in users into the homepage without d login page
     if request.user.is_authenticated:
         return redirect('home')
 
@@ -41,7 +41,7 @@ def first_register(request):
 
                 Restaurant.objects.create(
                     user = user,
-                    name = 'Add Name',
+                    name = user.username,
                     email = user.email,
                     phone = 91,
                     location = 'Add Location',
@@ -102,7 +102,19 @@ def delivery_details(request):
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['seller'])
 def categories(request):
-    return render(request,'restaurant/categories.html')
+    # form = AddCategory
+
+    if request.method == 'POST':
+
+        name = request.POST['name']
+        rest = Restaurant.objects.get(id = request.user.restaurant.id)
+        catg=Category(restaurant = rest,name = name)
+        catg.save()
+
+    catgs = request.user.restaurant.category_set.all()
+
+    context = {'categories':catgs}
+    return render(request,'restaurant/categories.html',context)
 
 
 @login_required(login_url='login')

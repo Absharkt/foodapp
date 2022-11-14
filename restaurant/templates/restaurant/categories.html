@@ -13,45 +13,56 @@
 
 
 <div class="container">
+  <button class="btn btn-primary btn-sm m-4"  data-toggle="modal" data-target="#exampleModal">New Category</button>
+
     <div class="row">
-      <table class="table table-secondary">
+      <table class="table table-sm w-50 table-secondary ">
         <thead class="bg-dark text-light">
               <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Customer</th>
-                <th></th>
+                <th scope="col">Categories</th>
+                <th scope="col"></th>
               </tr>
-            </thead>
-            <tbody class="bg-light ">
+        </thead>
+
+        <tbody class="bg-light ">
+
+          {% for category in categories %}
               <tr class="bg-light">
-                <th scope="row">1</th>
-                <td>Mark</td>
+                <td>{{category.name}}</td>
                 <td ><a href="{% url 'products' %}" class="text-primary">View Details</a></td>
+              </tr>
+          {% endfor %}
 
-              </tr>
-              <tr >
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td><a href="">View Details</a></td>
-              </tr>
-
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-              </tr>
-
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-              </tr>
-
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-              </tr>
             </tbody>
           </table>
     </div>
+</div>
+
+
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="" method="post">
+        {% csrf_token %}
+        <div class="modal-body">
+          <input type="text" placeholder="category" name="name">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-info">Add</button>
+        </div>
+    </form>
+    </div>
+  </div>
 </div>
 
 {% endblock %}
