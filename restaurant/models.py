@@ -24,3 +24,13 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+
+class Product(models.Model):
+    category = models.ForeignKey(Category,null=True,on_delete=models.CASCADE)
+    title = models.CharField(max_length=50,null=True)
+    description = models.CharField(max_length=50,null=True)
+    price = models.IntegerField(null=True)
+    image = models.ImageField(default='download.jpg',null=True,blank=True)
+
+    def __str__(self):
+        return self.title

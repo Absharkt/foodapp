@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from . models import Restaurant,Category
+from . models import Restaurant,Category,Product
 from . forms import AddRestaurant
 
 from django.contrib.auth.models import Group
@@ -125,5 +125,21 @@ def order_details(request):
 
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['seller'])
-def products(request):
-    return render(request,'restaurant/cat_prods.html')
+def products(request,id):
+    catg = Category.objects.get(id=id)
+
+    if request.method == 'POST':
+        category = Category.objects.get(id=id)
+        title = request.POST['name']
+        img = request.FILES['img']
+        desc = request.POST['desc']
+        price = request.POST['price']
+
+        product = Product(category = category,title = title,image = img,description = desc,price = price)
+        product.save()
+
+    all_products = Product.objects.filter(category=id)
+        
+
+    context = {'category':catg,'products':all_products}
+    return render(request,'restaurant/cat_prods.html',context) 

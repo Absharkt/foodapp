@@ -29,7 +29,7 @@
           {% for category in categories %}
               <tr class="bg-light">
                 <td>{{category.name}}</td>
-                <td ><a href="{% url 'products' %}" class="text-primary">View Details</a></td>
+                <td ><a href="{% url 'products' category.id %}" class="text-primary">View Details</a></td>
               </tr>
           {% endfor %}
 

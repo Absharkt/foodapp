@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from . decorators import allowed_users
 
 from . models import Customer
+from restaurant.models import Restaurant
 # Create your views here.
 
 
@@ -41,13 +42,21 @@ def customer_orders(request):
 @login_required(login_url='cust_login')
 @allowed_users(allowed_roles=['customer'])
 def restaurants(request):
-    return render(request,'customer/restaurents.html')
+    rest = Restaurant.objects.all()
+
+    context = {'restaurant':rest}
+    return render(request,'customer/restaurents.html',context)
 
 
 @login_required(login_url='cust_login')
 @allowed_users(allowed_roles=['customer'])
-def rest_home(request):
-    return render(request,'customer/rest_home.html')
+def rest_home(request,id):
+    rest = Restaurant.objects.get(id=id)
+    categories = rest.category_set.all()
+    
+
+    context = {'restaurant':rest,'categories':categories}
+    return render(request,'customer/rest_home.html',context)
 
 
 def cust_login(request):

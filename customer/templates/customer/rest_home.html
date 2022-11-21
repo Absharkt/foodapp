@@ -11,7 +11,10 @@
         <div class="row">
             <div class="container">
                 <div class=" rest-details mt-3">
-                    Restaurant Details
+                    <h2>{{restaurant}}</h2>
+                    <p>{{restaurant.email}}</p>
+                    <p>{{restaurant.phone}}</p>
+                    <p>{{restaurant.location}}</p>
 
                 </div>
 
@@ -36,10 +39,11 @@
         </div>
 
         <div>
+          {% for category in categories %}
 
             <div class="row">
                 <div class="item_name">
-                    <h2>Cereals and Breakfast Foods</h2>
+                    <h2>{{category.name}}</h2>
                 </div>
             </div>
 
@@ -100,7 +104,7 @@
             </div>
 
         </div>
-
+      {% endfor %}
     </section>
 
 {% endblock %}
