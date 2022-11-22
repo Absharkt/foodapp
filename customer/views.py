@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from . decorators import allowed_users
 
 from . models import Customer
-from restaurant.models import Restaurant
+from restaurant.models import Restaurant,Category,Product
 # Create your views here.
 
 
@@ -52,10 +52,14 @@ def restaurants(request):
 @allowed_users(allowed_roles=['customer'])
 def rest_home(request,id):
     rest = Restaurant.objects.get(id=id)
+    print(rest.id)
     categories = rest.category_set.all()
-    
 
-    context = {'restaurant':rest,'categories':categories}
+    prods = Product.objects.filter(category = 22)
+    print(prods)
+
+
+    context = {'restaurant':rest,'categories':categories,'products':prods}
     return render(request,'customer/rest_home.html',context)
 
 
@@ -63,7 +67,6 @@ def cust_login(request):
     if request.user.is_authenticated:
         return redirect('cust_home')
     else:
-
         if request.method == 'POST':
             username = request.POST['username']
             password = request.POST['password']
