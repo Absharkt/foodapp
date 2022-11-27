@@ -47,28 +47,33 @@
                 </div>
             </div>
 
-            {% for product in products %}
             <div class=" m-5">
                 <div class="row">
 
-                    <div class="card mr-3" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">{{product.title}}</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    {% for product in products %}
+
+
+                        <div class="card mr-3 mb-3" style="width: 18rem; box-shadow: 2px 2px 5px -2px rgb(179, 176, 176);">
+                            <img src="{{product.image.url}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">{{product.title}}</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <!-- <ul class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            </ul> -->
+                            <div class="card-body">
+                            <a href="#" class="card-link text-success">Card link</a>
+                            <a href="#" class="card-link text-success">Another link</a>
+                            </div>
                         </div>
-                        <ul class="list-group list-group-flush">
-                          <li class="list-group-item">An item</li>
-                          <li class="list-group-item">A second item</li>
-                        </ul>
-                        <div class="card-body">
-                          <a href="#" class="card-link">Card link</a>
-                          <a href="#" class="card-link">Another link</a>
-                        </div>
-                      </div>
+
+                      {% endfor %}
+
                 </div>
+
             </div>
-            {% endfor %}
 
         </div>
         {% endfor %}

@@ -21,7 +21,7 @@
 
           <button class="btn btn-sm btn-primary m-3 float-right" data-toggle="modal" data-target="#exampleModal">New Product</button>
 
-            <table class="table table-striped table-hover table-bordered">
+            <table class="table table-striped table-hover table-bordered table-sm">
                 <thead class="bg-secondary text-white">
                   <tr>
                     <th scope="col">Id</th>
@@ -36,7 +36,7 @@
 
                   <tr>
                     <th scope="row">{{i.id}}</th>
-                    <td><img src="{{i.image.url}}" alt="img" width="100px"></td>
+                    <td><img src="{{i.image.url}}" alt="img" width="100px" style="border-radius: 50%; box-shadow: 2px 2px 2px rgb(179, 176, 176);"></td>
                     <td>{{i.title}}</td>
                     <td>{{i.description}}</td>
                     <td>{{i.price}}</td>

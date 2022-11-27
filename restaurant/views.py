@@ -127,6 +127,8 @@ def order_details(request):
 @allowed_users(allowed_roles=['seller'])
 def products(request,id):
     catg = Category.objects.get(id=id)
+    rest_id = request.user.restaurant
+    print(rest_id)
 
     if request.method == 'POST':
         category = Category.objects.get(id=id)
@@ -135,7 +137,7 @@ def products(request,id):
         desc = request.POST['desc']
         price = request.POST['price']
 
-        product = Product(category = category,title = title,image = img,description = desc,price = price)
+        product = Product(restaurant = rest_id,category = category,title = title,image = img,description = desc,price = price)
         product.save()
 
     all_products = Product.objects.filter(category=id)

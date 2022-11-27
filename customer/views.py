@@ -54,12 +54,13 @@ def rest_home(request,id):
     rest = Restaurant.objects.get(id=id)
     print(rest.id)
     categories = rest.category_set.all()
+    products = rest.product_set.all()
+    print(products)
 
-    prods = Product.objects.filter(category = 22)
-    print(prods)
+    
 
 
-    context = {'restaurant':rest,'categories':categories,'products':prods}
+    context = {'restaurant':rest,'categories':categories,'products':products}
     return render(request,'customer/rest_home.html',context)
 
 
