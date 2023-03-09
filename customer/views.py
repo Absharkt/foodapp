@@ -18,7 +18,10 @@ def base(request):
 @login_required(login_url='cust_login')
 @allowed_users(allowed_roles=['customer'])
 def home(request):
-    return render(request,'customer/home.html')
+    restaurants = Restaurant.objects.all()
+
+    context = {'rests':restaurants}
+    return render(request,'customer/home.html',context)
 
 
 @login_required(login_url='cust_login')
@@ -53,14 +56,14 @@ def restaurants(request):
 def rest_home(request,id):
     rest = Restaurant.objects.get(id=id)
     print(rest.id)
-    categories = rest.category_set.all()
-    products = rest.product_set.all()
-    print(products)
-
     
+    categories = rest.category_set.all()
+    print(categories)
 
+    # products = rest.product_set.all()  not need
+    # print(products)
 
-    context = {'restaurant':rest,'categories':categories,'products':products}
+    context = {'restaurant':rest,'categories':categories}
     return render(request,'customer/rest_home.html',context)
 
 

@@ -9,7 +9,7 @@
 }
 
 body{
-    background-color: rgb(235, 235, 235);
+    
 }
 
 #logo{
@@ -18,13 +18,10 @@ body{
 }
 
 a{
-    color: white;
+    color: rgb(116, 116, 116);
 }
 
 a:hover{
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
-.seller-nav{
-    background-color: rgb(116, 116, 116);
-}

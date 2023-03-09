@@ -1,67 +1,66 @@
-{% extends 'restaurant/rest_base.html' %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodshades | Register</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'rest_style/register.css' %}">
+</head>
+<body>
 
-{% block style %}
-<link rel="stylesheet" href="{% static 'rest_style/register.css' %}">
-{% endblock %}
+  <section class="m-4">
 
-
-{% block content %}
-
-<section class="m-4">
-
-  <div class="container">
-    <div class="row">
-
-
-        <div class="bg-light p-4 cover">
-          <h2 class="mb-5">Register Your Restaurant</h2>
-
-
-          <div class="d-flex justify-content-center form_container">
-
-            <form method="POST" action="">
-              {% csrf_token %}
-
-              <div class="input-group mb-3">
-                {{form.username.label}}
-                {{form.username}}
-              </div>
+    <div class="container">
+      <div class="row">
   
-              <div class="input-group mb-2">
-                {{form.email.label}}
-                {{form.email}}
-              </div>
+          <div class="bg-light p-4 cover">
+            <h2 class="mb-5">Register Your Restaurant</h2>
+            <div class="d-flex justify-content-center form_container">
   
-              <div class="input-group mb-2">
-                {{form.password1.label}}
-                {{form.password1}}
-              </div>
+              <form method="POST" action="">
+                {% csrf_token %}
   
-              <div class="input-group mb-2">
-                {{form.password2.label}}
-                {{form.password2}}
+                <div class="input-group mb-3">
+                  {{form.username.label}}
+                  {{form.username}}
+                </div>
+    
+                <div class="input-group mb-2">
+                  {{form.email.label}}
+                  {{form.email}}
+                </div>
+    
+                <div class="input-group mb-2">
+                  {{form.password1.label}}
+                  {{form.password1}}
+                </div>
+    
+                <div class="input-group mb-2">
+                  {{form.password2.label}}
+                  {{form.password2}}
+    
+                </div>
+    
+                <div class="d-flex justify-content-center login_container">
+                  <button type="submit" class="btn btn-info">Reg</button>
+                </div>
+              </form>
+            </div>
+    
+            {{form.errors}}
   
-              </div>
   
-              <div class="d-flex justify-content-center login_container">
-                <button type="submit" class="btn btn-info">Reg</button>
-              </div>
-            </form>
+            <div class="d-flex justify-content-between m-4">
+              <a href="{% url 'login'%}" id="forLogin">Already registered..?</a>
+            </div>
+  
           </div>
   
-          {{form.errors}}
-
-
-          <div class="d-flex justify-content-between m-4">
-            <a href="{% url 'login'%}" id="forLogin">Already registered..?</a>
-          </div>
-
-        </div>
-
+      </div>
     </div>
-  </div>
 
-</section>
-
-{% endblock %}
+</body>
+</html>

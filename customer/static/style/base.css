@@ -2,10 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 img{
-    border-radius: 50%;
+    /* border-radius: 50%; */
     margin-right: 20px;
 }
 
@@ -18,20 +20,21 @@ a:hover{
 }
 
 .fa-user,.fa-cart-shopping,.fa-list-check{
-    color: white;
+    color: #ffffff;
+    transition: ease-in-out 50ms;
 }
 
 .fa-user:hover{
-    transform: scale(1.4);
-    color: rgb(145, 224, 149);
+    transform: scale(1.5);
+    color: #c1ff76;
 }
 
 .fa-cart-shopping:hover{
-    transform: scale(1.4);
-    color: rgb(145, 224, 149);
+    transform: scale(1.5);
+    color: #c1ff76;
 }
 
 .fa-list-check:hover{
-    transform: scale(1.4);
-    color: rgb(145, 224, 149);
+    transform: scale(1.5);
+    color: #c1ff76;
 }

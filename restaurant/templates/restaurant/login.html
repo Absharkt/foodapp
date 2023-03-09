@@ -1,44 +1,51 @@
-{% extends 'restaurant/rest_base.html' %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodshades | Login</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'rest_style/login.css' %}">
+</head>
 
-{% block style %}<link rel="stylesheet" href="{% static 'rest_style/login.css' %}">{% endblock %}
+<body>
 
-
-
-{% block content %}
-
-<div class="container">
+  <div class="container">
     <div class="my-5 d-flex justify-content-center">
-        <div class="reg py-5">
-            <h2 class="mb-4">Login</h2>
+      <div class="reg py-5">
+        <h2 class="mb-4">Login</h2>
 
-            <form method="post">
-              {% csrf_token %}
+        <form method="post">
+          {% csrf_token %}
 
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Username</label>
-                  <input type="text" class="form-control" name="username">
-                </div>
-                
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" name="password">
-                </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="text" class="form-control" name="username">
+          </div>
 
-                <button type="submit" class="btn btn-primary my-3">Submit</button>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="password">
+          </div>
 
-            </form>
+          <button type="submit" class="btn btn-primary my-3">Submit</button>
 
-            <div class="text-danger f-3">
-              {% for message in messages %}
-              {{message}}
-            {% endfor %}
-            </div>
+        </form>
 
-              <a href="{% url 'register0'%}" class="text-primary">Don't have an account..?</a>
-
+        <div class="text-danger f-3">
+          {% for message in messages %}
+          {{message}}
+          {% endfor %}
         </div>
-    </div>
-</div>
 
-{% endblock %}
+        <a href="{% url 'register0'%}" class="text-primary">Don't have an account..?</a>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

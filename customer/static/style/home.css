@@ -4,15 +4,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.user{
-    margin: 20px 0 10px 40px;
-}
-
-.near_rest{
-    margin: 10px 0 10px 40px;
-
-}
-
 .explore{
     margin: 10px 0 10px 80px;
 }
@@ -22,11 +13,11 @@
 }
 
 body{
-    background-color: rgb(234, 255, 234);
+    background-color: rgb(250, 250, 250);
 }
 
 .cb{
-    background-color:rgb(217, 255, 213) ;
+    background-color:rgb(245, 245, 245) ;
 }
 
 .cb img{
@@ -37,7 +28,13 @@ body{
 
 }
 .card{
-    box-shadow: .2px .2px 3px .2px rgb(233, 233, 233);
+    box-shadow: 0px 2px 6px -4px #506d2c;
+    transition: ease-in-out 150ms;
+
+}
+
+.card:hover{
+    box-shadow: 1px 2px 8px -4px #04502d;
 
 }
 

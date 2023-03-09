@@ -1,45 +1,109 @@
-{% extends 'customer/base.html' %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'style/cust_login.css' %}">
+  <title>Login</title>
+</head>
+<body>
 
-{% block style %}<link rel="stylesheet" href="{% static 'style/cust_login.css' %}">{% endblock %}
+  <div class="container-fluid">
+    <div class="row">
 
+      <div class="col-sm-12 col-md-6 p-0">
+        <div class="reg">
+          <h1 class="mb-4">Login</h1>
 
-
-{% block content %}
-
-<div class="container">
-    <div class="my-5 d-flex justify-content-center">
-        <div class="reg py-5">
-            <h2 class="mb-4">Login</h2>
-
-            <form method="post">
-              {% csrf_token %}
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Username</label>
-                  <input type="text" class="form-control" name="username">
-                </div>
-                
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" name="password">
-                </div>
-
-                <button type="submit" class="btn btn-primary my-2">Submit</button>
-
-              </form>
-
-              <div class="text-danger mb-3">
-                {% for message in messages%}
-                  {{message}}
-                {% endfor %}  
+          <form method="post">
+            {% csrf_token %}
+              <div class="form-group">
+                <label for="exampleInputEmail1">Username</label>
+                <input type="text" class="form-control" name="username">
               </div>
-
-              <a href="{% url 'cust_register'%}" class="text-primary">Don't have an account..?</a>
-              <br>
-              <a href="{% url 'login'%}" class="text-primary">Log in to Restaurant Account</a>
-
+              
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" name="password">
+              </div>
+  
+              <button type="submit" class="btn btn-primary my-2">Submit</button>
+  
+            </form>
+  
+            <div class="text-danger mb-3">
+              {% for message in messages%}
+                {{message}}
+              {% endfor %}  
+            </div>
+  
+            <a href="{% url 'cust_register'%}" class="text-dark">Don't have an account..?</a>
+            <br>
+            <a href="{% url 'login'%}" class="text-dark">Log in to Restaurant Account</a>
         </div>
-    </div>
-</div>
+      </div> 
 
-{% endblock %}
+      <div class="col-sm-12 col-md-6 p-0">
+        <div class="h-100 d-none d-md-flex justify-content-center align-items-center bg-success">
+          <img width="85%" src="../../static/images/coverpic.png" alt="img">
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+<!-- 
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 p-0">
+        <div class="reg">
+          <h2 class="mb-4">Login</h2>
+
+          <form method="post">
+            {% csrf_token %}
+              <div class="form-group">
+                <label for="exampleInputEmail1">Username</label>
+                <input type="text" class="form-control" name="username">
+              </div>
+              
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" name="password">
+              </div>
+  
+              <button type="submit" class="btn btn-primary my-2">Submit</button>
+  
+            </form>
+  
+            <div class="text-danger mb-3">
+              {% for message in messages%}
+                {{message}}
+              {% endfor %}  
+            </div>
+  
+            <a href="{% url 'cust_register'%}" class="text-dark">Don't have an account..?</a>
+            <br>
+            <a href="{% url 'login'%}" class="text-dark">Log in to Restaurant Account</a>
+        </div>
+      </div> -->
+        
+
+
+
+</body>
+</html>
+
+
+
+
