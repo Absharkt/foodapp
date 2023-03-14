@@ -19,15 +19,18 @@
     <div class="row">
       {% for rest in rests %}
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card bg-light mb-5 border-0">
-            <div class="card-body cb">
-                <b>{{rest.name}}</b>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW1jRamTcbgdEHsBS-0iu-5ZD_1zqEMP4Svw&usqp=CAU" class="w-100 mt-1" alt="img">
-                <p class="mb-0">{{rest.location}}</p>
-                <p>Rating</p>
-                <p class="desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="{% url 'rest_home' rest.id %}">
+            <div class="card bg-light mb-5 border-0">
+              <div class="card-body cb">
+                  <b>{{rest.name}}</b>
+                  <img src="{{rest.image.url}}" class="w-100 mt-1" alt="img">
+                  <p class="mb-0">{{rest.location}}</p>
+                  <b>{{rest.city}}</b>
+                  <p>Rating</p>
+                  <p class="desc">{{rest.description}}</p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       {% endfor %}
     </div>

@@ -41,3 +41,7 @@ body{
 .card-header{
     background-color: rgb(174, 243, 174);
 }
+
+a{
+    color: black;
+}

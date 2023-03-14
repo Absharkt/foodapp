@@ -1,0 +1,22 @@
+{% extends 'restaurant/rest_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <h2>Edit Details</h2>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12 col-md-8">
+            <form method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-sm btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -12,6 +12,7 @@ class Restaurant(models.Model):
     description = models.CharField(max_length=100,null=True,blank = True)
     location = models.CharField(max_length=100,null=True)
     city = models.CharField(max_length=100,null=True)
+    image = models.ImageField(default='download.jpg',null=True,blank=True)
 
     def __str__(self):
         return self.user.username

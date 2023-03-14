@@ -27,7 +27,7 @@ def home(request):
 @login_required(login_url='cust_login')
 @allowed_users(allowed_roles=['customer'])
 def profile(request):
-    return render(request,'customer/profile.html')
+    return render(request,'customer/cust_profile.html')
 
 
 @login_required(login_url='cust_login')

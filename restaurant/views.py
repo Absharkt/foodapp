@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from . models import Restaurant,Category,Product
-from . forms import AddRestaurant,UpdateRestaurant
+from . forms import AddRestaurant,UpdateRestaurant,UpdateImage
 
 from django.contrib.auth.models import Group
 from django.contrib.auth import authenticate,login,logout
@@ -146,14 +146,27 @@ def products(request,id):
     context = {'category':catg,'products':all_products}
     return render(request,'restaurant/cat_prods.html',context) 
 
-def profile(request):
+def rest_profile(request):
     rest = Restaurant.objects.get(id = request.user.restaurant.id)
-    print(rest.email)
+    print(rest)
+    form = UpdateImage(instance=rest)
+    if request.method == "POST":
+        form = UpdateImage(request.POST,request.FILES,instance=rest)
+        if form.is_valid():
+            form.save()
+            return redirect('profile')
+
+    context = {'form':form}
+    return render(request,'restaurant/profile.html',context)
+
+def update_profile(request):
+    rest = Restaurant.objects.get(id = request.user.restaurant.id)
     form = UpdateRestaurant(instance=rest)
     if request.method == "POST":
         form = UpdateRestaurant(request.POST,instance=rest)
         if form.is_valid():
             form.save()
+            return redirect('profile')
 
     context = {'form':form}
-    return render(request,'restaurant/profile.html',context)
+    return render(request,'restaurant/update_profile.html',context)

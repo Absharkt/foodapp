@@ -12,7 +12,12 @@ class AddRestaurant(UserCreationForm):
 class UpdateRestaurant(ModelForm):
     class Meta:
         model = Restaurant
-        exclude = ["user"]
+        exclude = ["user","image"]
+
+class UpdateImage(ModelForm):
+    class Meta:
+        model = Restaurant
+        fields = ['image']
 
 
 # class AddCategory(ModelForm):
