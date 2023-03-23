@@ -2,7 +2,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.forms import ModelForm
 from django.contrib.auth.models import User
 
-from . models import Category,Restaurant
+from . models import Category,Restaurant,Product
 
 class AddRestaurant(UserCreationForm):
     class Meta:
@@ -18,6 +18,11 @@ class UpdateImage(ModelForm):
     class Meta:
         model = Restaurant
         fields = ['image']
+
+class AddProduct(ModelForm):
+    class Meta:
+        model = Product
+        fields = ['title','description','price','image']
 
 
 # class AddCategory(ModelForm):

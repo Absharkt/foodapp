@@ -1,69 +1,96 @@
 {% extends 'customer/base.html' %}
 {% load static %}
-
-{% block style %}<link rel="stylesheet" href="{% static 'style/cart.css' %}">{% endblock %}
-
-
+<!-- {% block style %}<link rel="stylesheet" href="{% static 'style/cart.css' %}">{% endblock %} -->
 
 {% block content %}
 
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="m-4">
-                    <h1>Cart</h1>
-                </div>
-            </div>
+<section>
+  <div class="container">
+    <div class="row">
+        <h1 class="my-4">Cart</h1>
+    </div>
 
-
-            <div class="row">
-
-                    <table class="table">
-                        <thead class="t-head">
-                          <tr>
-                            <th scope="col">Product</th>
-                            <th class="desc" scope="col">Description</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Total</th>
-        
-                          </tr>
-                        </thead>
-                        <tbody >
-        
-                          <tr>
-                            <td scope="row"><img src="" alt="" class="pic"></td>
-                            <td class="desc">Lorem ipsum dolor voluptat   <a href="#">see more</a></td>
-                            <td>Rs.1200</td>
-                            <td>
-                                <button class="btn btn-sm btn-primary">-</button>
-                                <b>2</b>
-                                <button class="btn btn-sm btn-primary">+</button>
-        
-                            </td>
-                            <td>Rs.1200</td>
-        
-                          </tr>
-        
-        
-                          <tr>
-                            <th scope="row"><img src="" alt=""></th>
-                            <td>Lorem ipsum dolor <br> voluptate officia <a href="#">see more</a></td>
-                            <td></td>
-                            <td>Rs.1200</td>
-                            <td>Rs.1200</td>
-        
-                          </tr>
-                         
-                        </tbody>
-                      </table>
-
-                      <a href=""><button class="btn btn-success">Checkout</button></a>
-
-    
-            </div>
-
+    <!-- <div class="row">
+        <div class="col-sm-12">
+          <table class="table">
+            <thead class="t-head">
+              <tr>
+                <th scope="col">Product</th>
+                <th class="desc">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row"><img src="../../../media/burger.jpg" alt="" class="pic"></td>
+                <td class="desc">Lorem ipsum dolor voluptat</td>
+                <td>Rs.1200</td>
+                <td>
+                  <button class="btn btn-sm btn-primary">-</button>
+                  <b>2</b>
+                  <button class="btn btn-sm btn-primary">+</button>
+                </td>
+                <td>Rs.1200</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-    </section>
+    </div> -->
+
+
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table">
+          <!-- <thead class="thead-light">
+            <tr>
+              <th scope="col">Product</th>
+              <th scope="col">Details</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Quality</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead> -->
+          <tbody>
+            <tr>
+              <th scope="row" style="width: 10%;"><img src="../../../media/spicy-chicken-curry.jpg" alt="img"></th>
+              <td style="width: 35%;"><p>Lorem ipsum dolor sit amet.</p><p>sdljflsj</p></td>
+              <td>255</td>
+              <td><button class="btn btn-sm btn-primary" onclick="decrease()">-</button>
+                <b id="count"></b>
+                <button class="btn btn-sm btn-primary" onclick="inrease()">+</button></td>
+              <td>1550</td>
+            </tr>
+          </tbody>
+        </table>  
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-12 d-flex justify-content-end my-3">
+        <a href=""><button class="btn btn-sm btn-success">Checkout</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+    let num = 1
+    document.getElementById('count').innerHTML = num
+    console.log(num);
+
+    function inrease(){
+      num = num+1
+      document.getElementById('count').innerHTML = num
+    }
+
+    function decrease(){
+      num = num-1
+      document.getElementById('count').innerHTML = num
+    }
+
+</script>
 
 {% endblock %}

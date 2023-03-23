@@ -1,89 +1,85 @@
 {% extends 'customer/base.html' %}
 {% load static %}
 
-{% block style %}<link rel="stylesheet" href="{% static 'style/rest_home.css' %}">{% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'style/rest_home.css' %}">{% endblock %}
 
 
 
 {% block content %}
 
-    <section>
-        <div class="container rest">
-            <div class="row">
+<section>
+    <div class="container rest">
+        <div class="row">
 
-                <div class="col-sm-12 col-md-4">
-                    <img src="{{restaurant.image.url}}" width="50%" alt="image">
-                </div>
+            <div class="col-sm-12 col-md-4">
+                <img src="{{restaurant.image.url}}" width="50%" alt="image">
+            </div>
 
-                <div class="col-sm-12 col-md-8">
-                    <div class="rest-details mt-3">
-                        <h2>{{restaurant.name}}</h2>
-                        <p>{{restaurant.email}}</p>
-                        <p>{{restaurant.phone}}</p>
-                        <p>{{restaurant.location}}</p>
-                        <p>{{restaurant.city}}</p>
-                    </div>
+            <div class="col-sm-12 col-md-8">
+                <div class="rest-details mt-3">
+                    <h2>{{restaurant.name}}</h2>
+                    <p>{{restaurant.email}}</p>
+                    <p>{{restaurant.phone}}</p>
+                    <p>{{restaurant.location}}</p>
+                    <p>{{restaurant.city}}</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section>
+<section>
 
-        <div class="container">
+    <div class="container">
+        <div class="row">
+
+            <div class="w-100 text-center catg_titl">
+                <h1>Categories</h1>
+            </div>
+
+        </div>
+
+        <div>
+            <div class="m-5">
+                <input class="find" type="text" placeholder="Search">
+                <button type="submit" class="find_btn"><i class="fa-solid fa-magnifying-glass fa-fx-1"></i></button>
+            </div>
+        </div>
+
+            {% for category in categories %}
+
             <div class="row">
+                {% if category.product_set.all %}
+                <div class="item_name">
+                    <h2>{{category.name}}</h2>
+                </div>
+                {% endif %}
+            </div>
 
-                <div class="w-100 text-center catg_titl">
-                    <h1>Categories</h1>
-                </div>
-    
-            </div>
-    
-            <div>
-                <div class="m-5">
-                    <input class="find" type="text" placeholder="Search">
-                    <button type="submit" class="find_btn"><i class="fa-solid fa-magnifying-glass fa-fx-1"></i></button>
-                  </div>
-            </div>
-    
-            <div>
-              {% for category in categories %}
-    
-                <div class="row">
-                    <div class="item_name">
-                        <h2>{{category.name}}</h2>
-                    </div>
-                </div>
-    
-                <div class=" m-5">
-                    <div class="row">
-    
-                        {% for product in category.product_set.all %}
-    
-    
-                            <div class="card mr-3 mb-3" style="width: 18rem; box-shadow: 2px 2px 5px -2px rgb(179, 176, 176);">
-                                <img src="{{product.image.url}}" class="card-img-top" alt="...">
-                                <div class="card-body">
+            <div class="row">
+                {% for product in category.product_set.all %}
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card mr-3 mb-3" style="box-shadow: 2px 2px 5px -2px rgb(179, 176, 176);">
+                            <img src="{{product.image.url}}" class="card-img-top" alt="...">
+                            <div class="card-body">
                                 <h5 class="card-title">{{product.title}}</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-    
-                                <div class="card-body">
-                                <a href="#" class="card-link text-success">Card link</a>
-                                <a href="#" class="card-link text-success">Another link</a>
-                                </div>
+                                <p class="card-text">Some quick example text to the card's content.</p>
                             </div>
-    
-                          {% endfor %}
-    
+        
+                            <div class="card-body">
+                                <a href="#" class="card-link text-primary d-block mb-2">Add to Cart</a>
+                                <a href="#" class="btn btn-success btn-sm text-white">Buy Now</a>
+                            </div>
+                        </div>
                     </div>
-    
-                </div>
-    
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
 
-    </section>
+
+        {% endfor %}
+    </div>
+
+</section>
 
 {% endblock %}

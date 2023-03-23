@@ -21,7 +21,7 @@ a:hover{
 
 .fa-user,.fa-cart-shopping,.fa-list-check{
     color: #ffffff;
-    transition: ease-in-out 50ms;
+    transition: ease-in-out ;
 }
 
 .fa-user:hover{

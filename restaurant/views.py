@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from . models import Restaurant,Category,Product
-from . forms import AddRestaurant,UpdateRestaurant,UpdateImage
+from . forms import AddRestaurant,UpdateRestaurant,UpdateImage,AddProduct
 
 from django.contrib.auth.models import Group
 from django.contrib.auth import authenticate,login,logout
@@ -129,22 +129,52 @@ def products(request,id):
     catg = Category.objects.get(id=id)
     rest_id = request.user.restaurant
     print(rest_id)
+    form = AddProduct()
 
     if request.method == 'POST':
-        category = Category.objects.get(id=id)
-        title = request.POST['name']
-        img = request.FILES['img']
-        desc = request.POST['desc']
-        price = request.POST['price']
+        form = AddProduct(request.POST,request.FILES)
+        if form.is_valid():
+            title = form.cleaned_data['title']
+            desc = form.cleaned_data['description']
+            price = form.cleaned_data['price']
+            img = form.cleaned_data['image']
+            product = Product(restaurant = rest_id,category = catg,title = title,image = img,description = desc,price = price)
+            print(product.image)
+            product.save()
+        
+        # =========================================method done A@first
+        # category = Category.objects.get(id=id)
+        # title = request.POST['name']
+        # img = request.FILES['img']
+        # desc = request.POST['desc']
+        # price = request.POST['price']
 
-        product = Product(restaurant = rest_id,category = category,title = title,image = img,description = desc,price = price)
-        product.save()
+        # product = Product(restaurant = rest_id,category = category,title = title,image = img,description = desc,price = price)
+        # product.save()
 
     all_products = Product.objects.filter(category=id)
-        
-
-    context = {'category':catg,'products':all_products}
+    context = {'category':catg,'products':all_products,'form':form}
     return render(request,'restaurant/cat_prods.html',context) 
+
+def update_product(request,id):
+    product = Product.objects.get(id=id)
+    form = AddProduct(instance=product)
+    if request.method == 'POST':
+        form = AddProduct(request.POST,request.FILES,instance=product)
+        if form.is_valid():
+            form.save()
+
+            # pending work (redirect)
+            # previous_page = request.META.get('http://127.0.0.1:8000/restaurant/products/')
+            # return redirect(previous_page)
+        
+    context = {'form':form}
+    return render(request,'restaurant/edit_product.html',context)
+
+def delete_product(request,id):
+    prod = Product.objects.get(id=id)
+    prod.delete()
+    return redirect('categories')
 
 def rest_profile(request):
     rest = Restaurant.objects.get(id = request.user.restaurant.id)
