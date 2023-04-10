@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from . decorators import allowed_users
 
-from . models import Customer
+from . models import Customer,Cart,CartItem
 from restaurant.models import Restaurant, Category, Product
 # Create your views here.
 
@@ -34,7 +34,17 @@ def profile(request):
 @login_required(login_url='cust_login')
 @allowed_users(allowed_roles=['customer'])
 def cart(request):
-    return render(request, 'customer/cart.html')
+    cart_name = ''
+    items = ''
+    msg = ''
+    try:
+        cart_name = Cart.objects.get(customer = request.user.id)
+        items = cart_name.cartitem_set.all()
+    except:
+        msg = 'User has no Cart'
+
+    context = {'cart':cart_name,'items':items,'msg':msg}
+    return render(request, 'customer/cart.html',context)
 
 
 @login_required(login_url='cust_login')
@@ -75,15 +85,12 @@ def cust_login(request):
         if request.method == 'POST':
             username = request.POST['username']
             password = request.POST['password']
-
             user = authenticate(request, username=username, password=password)
-
             if user is not None:
                 login(request, user)
                 return redirect('cust_home')
             else:
                 messages.info(request, 'Username or Password is Incorrect..')
-
     return render(request, 'customer/cust_login.html')
 
 

@@ -10,6 +10,15 @@
         <h1 class="my-4">Cart</h1>
     </div>
 
+      {{cart}}
+      {{msg}}
+      <hr>
+      {% for item in items %}
+        <h5>{{item.product}}</h5>
+        <h5>{{item.quantity}}</h5> 
+        <img src="{{item.product.image.url}}" width="20%" alt="">
+      {% endfor %}
+
     <!-- <div class="row">
         <div class="col-sm-12">
           <table class="table">
