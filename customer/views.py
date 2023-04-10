@@ -34,16 +34,10 @@ def profile(request):
 @login_required(login_url='cust_login')
 @allowed_users(allowed_roles=['customer'])
 def cart(request):
-    cart_name = ''
-    items = ''
-    msg = ''
-    try:
-        cart_name = Cart.objects.get(customer = request.user.id)
-        items = cart_name.cartitem_set.all()
-    except:
-        msg = 'User has no Cart'
+    cart_name = Cart.objects.get(customer = request.user.id)
+    items = cart_name.cartitem_set.all()
 
-    context = {'cart':cart_name,'items':items,'msg':msg}
+    context = {'cart':cart_name,'items':items}
     return render(request, 'customer/cart.html',context)
 
 
@@ -119,6 +113,8 @@ def cust_register(request):
                     username=user.username,
                     email=user.email,
                     phone=91)
+                
+                Cart.objects.create(customer = user)
                 return redirect('cust_login')
 
     return render(request, 'customer/cust_reg.html', {'form': form})

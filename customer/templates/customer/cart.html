@@ -11,13 +11,18 @@
     </div>
 
       {{cart}}
-      {{msg}}
       <hr>
-      {% for item in items %}
-        <h5>{{item.product}}</h5>
-        <h5>{{item.quantity}}</h5> 
-        <img src="{{item.product.image.url}}" width="20%" alt="">
-      {% endfor %}
+
+{% if items %}
+    {% for item in items %}
+    <h5>{{item.product}}</h5>
+    <h5>{{item.quantity}}</h5> 
+    <img src="{{item.product.image.url}}" width="20%" alt="">
+    {% endfor %}
+
+{% else %}
+    <h5>Cart Empty</h5>
+{% endif %}
 
     <!-- <div class="row">
         <div class="col-sm-12">
