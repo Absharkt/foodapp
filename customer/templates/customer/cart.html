@@ -11,71 +11,26 @@
     </div>
 
       {{cart}}
-      <hr>
-
-{% if items %}
-    {% for item in items %}
-    <h5>{{item.product}}</h5>
-    <h5>{{item.quantity}}</h5> 
-    <img src="{{item.product.image.url}}" width="20%" alt="">
-    {% endfor %}
-
-{% else %}
-    <h5>Cart Empty</h5>
-{% endif %}
-
-    <!-- <div class="row">
-        <div class="col-sm-12">
-          <table class="table">
-            <thead class="t-head">
-              <tr>
-                <th scope="col">Product</th>
-                <th class="desc">Description</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="row"><img src="../../../media/burger.jpg" alt="" class="pic"></td>
-                <td class="desc">Lorem ipsum dolor voluptat</td>
-                <td>Rs.1200</td>
-                <td>
-                  <button class="btn btn-sm btn-primary">-</button>
-                  <b>2</b>
-                  <button class="btn btn-sm btn-primary">+</button>
-                </td>
-                <td>Rs.1200</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-    </div> -->
-
 
     <div class="row">
       <div class="col-sm-12">
-        <table class="table">
-          <!-- <thead class="thead-light">
-            <tr>
-              <th scope="col">Product</th>
-              <th scope="col">Details</th>
-              <th scope="col">Amount</th>
-              <th scope="col">Quality</th>
-              <th scope="col">Total</th>
-            </tr>
-          </thead> -->
+        <table class="table table-hover">
           <tbody>
+            {% if items %}
+            {% for item in items %}
             <tr>
-              <th scope="row" style="width: 10%;"><img src="../../../media/spicy-chicken-curry.jpg" alt="img"></th>
-              <td style="width: 35%;"><p>Lorem ipsum dolor sit amet.</p><p>sdljflsj</p></td>
-              <td>255</td>
+              <th scope="row" style="width: 10%;"><a href="#"><img src="{{item.product.image.url}}" alt="img"></a></th>
+              <td style="width: 35%;"><p>{{item.product.title}}</p><p>{{item.product.description}}</p></td>
+              <td>{{item.product.price}}</td>
               <td><button class="btn btn-sm btn-primary" onclick="decrease()">-</button>
                 <b id="count"></b>
                 <button class="btn btn-sm btn-primary" onclick="inrease()">+</button></td>
               <td>1550</td>
             </tr>
+            {% endfor %}
+            {% else %}
+            <h5 class="alert-danger alert w-25 mt-3">Cart Empty</h5>
+            {% endif %}
           </tbody>
         </table>  
       </div>
