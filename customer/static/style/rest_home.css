@@ -5,10 +5,11 @@ body{
 }
 
 .rest{
-    background-color: rgb(228, 255, 228);
+    background-color: rgb(239, 248, 239);
     padding: 25px;
 
 }
+
 
 /* search */
 
@@ -43,4 +44,12 @@ body{
 .item_name{
     margin-left: 20px;
     font-weight: lighter;
+}
+
+p{
+    margin: 0;
+}
+
+a{
+    color:black;
 }

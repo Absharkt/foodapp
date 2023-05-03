@@ -1,45 +1,48 @@
 {% extends 'customer/base.html' %}
 {% load static %}
 
-{% block style %}<link rel="stylesheet" href="{% static 'style/restaurents.css' %}">{% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'style/restaurents.css' %}">{% endblock %}
 
 
 
 {% block content %}
 
 
-  <section>
-      <div class="row">
-        <div class="container">
-          <div class="m-5">
-            <input class="find" type="text" placeholder="Find Restaurants">
-            <button type="submit" class="find_btn"><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
+<section class="bg-light">
+  <div class="container">
+    <div class="row ">
+      <div class="m-5">
+        <input class="find" type="text" placeholder="Find Restaurants">
+        <button type="submit" class="find_btn"><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-light">
+  <div class="container">
+    <div class="row">
+      {% for rest in restaurant %}
+      <div class="card mb-3 mr-2 rest_card" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{rest.image.url}}" alt="image" class="w-100 h-auto">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <a class="rest_name" href="{% url 'rest_home' rest.id %}">
+                <h5 class="card-title">{{rest.name}}</h5>
+              </a>
+              <p class="card-text">{{rest.description}}</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
           </div>
         </div>
       </div>
-  </section>
-
-
-    <section>
-        <div class="container">
-            <div class="row">
-              {% for rest in restaurant %}
-                <div class="card mb-3 mr-2 rest_card" style="max-width: 540px;">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img src="{{rest.image.url}}" alt="image">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <a class="rest_name" href="{% url 'rest_home' rest.id %}"><h5 class="card-title">{{rest.name}}</h5></a>
-                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 {% endblock %}

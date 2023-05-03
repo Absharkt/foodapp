@@ -9,13 +9,11 @@
 {% block content %}
 
 <section>
-    <div class="container rest">
+    <div class="container rest mt-md-3 shadow-sm">
         <div class="row">
-
-            <div class="col-sm-12 col-md-4">
-                <img src="{{restaurant.image.url}}" width="50%" alt="image">
+            <div class="col-sm-12 col-md-3">
+                <img src="{{restaurant.image.url}}" class="img-fluid my-3 mw-100" alt="image">
             </div>
-
             <div class="col-sm-12 col-md-8">
                 <div class="rest-details mt-3">
                     <h2>{{restaurant.name}}</h2>
@@ -23,6 +21,7 @@
                     <p>{{restaurant.phone}}</p>
                     <p>{{restaurant.location}}</p>
                     <p>{{restaurant.city}}</p>
+                    <span>{{restaurant.description}}</span>
                 </div>
             </div>
         </div>
@@ -32,13 +31,15 @@
 <section>
 
     <div class="container">
-        <div class="row">
+
+        <!-- unnecessary -->
+        <!-- <div class="row">
 
             <div class="w-100 text-center catg_titl">
                 <h1>Categories</h1>
             </div>
 
-        </div>
+        </div> -->
 
         <div>
             <div class="m-5">
@@ -59,9 +60,9 @@
 
             <div class="row">
                 {% for product in category.product_set.all %}
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card mr-3 mb-3" style="box-shadow: 2px 2px 5px -2px rgb(179, 176, 176);">
-                            <img src="{{product.image.url}}" class="card-img-top" alt="...">
+                    <div class="col-sm-6 col-md-4 col-lg-3 my-3">
+                        <div class="card h-100" style="box-shadow: 2px 2px 5px -2px rgb(179, 176, 176);">
+                            <img src="{{product.image.url}}" class="card-img-top w-100" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{product.title}}</h5>
                                 <p class="card-text">Some quick example text to the card's content.</p>
