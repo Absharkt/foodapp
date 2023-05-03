@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1*g-_inp$h_6m5p4j7u0tl(&*c6m@v+tufty*gb((4jecm7qvw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'foodshade.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'final_project',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'py123',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'PASSWORD': 'Z16mKV1mXSGNXqBbY0mB',
+        'HOST': 'containers-us-west-38.railway.app',
+        'PORT': '5903'
     }
 }
 
